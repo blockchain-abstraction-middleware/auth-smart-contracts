@@ -1,0 +1,11 @@
+{
+  "name": "auth-smart-contracts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<paddymchale@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.4.0",
+    "truffle-hdwallet-provider": "^1.0.17"
+  }
+}
