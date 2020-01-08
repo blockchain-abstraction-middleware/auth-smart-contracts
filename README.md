@@ -24,3 +24,4 @@ Copy your infura project id to the `truffle-config.js` file
 - let accounts = await web3.eth.getAccounts()
 - instance.subscribe({ from: accounts[0], value: 100000000000000000 })
 - await web3.eth.getBalance(instance.address)
+- instance.widthdraw({ from: accounts[0] })
