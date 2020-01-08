@@ -1,4 +1,4 @@
-pragma solidity >=0.4.21 <0.6.0;
+pragma solidity 0.5.8;
 
 import "@openzeppelin/contracts/ownership/Ownable.sol";
 
@@ -6,6 +6,7 @@ contract Authorization is Ownable {
   mapping (address => uint) subscribers;
 
   event Subscribed(address indexed account);
+  event Withdraw(bool hasWithdrawn);
 
   function subscribe()
     public
@@ -13,5 +14,13 @@ contract Authorization is Ownable {
   {
     subscribers[msg.sender] = msg.value;
     emit Subscribed(msg.sender);
+  }
+
+  function widthdraw()
+    public
+    onlyOwner
+  {
+    msg.sender.transfer(address(this).balance);
+    emit Withdraw(true);
   }
 }

@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "<paddymchale@hotmail.com>",
   "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
   "dependencies": {
     "@openzeppelin/contracts": "^2.4.0",
     "truffle-hdwallet-provider": "^1.0.17"
